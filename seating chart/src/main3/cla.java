@@ -7,6 +7,9 @@ import java.lang.*;
 
 public class cla
 {
+	/* The main method sets up the rules of the game and prints out the 2d array
+	* of students in the seating chart with the printArray2 method.
+	*/
 	public static void main(String[] args) {
 	    //Creating array
 		JOptionPane.showMessageDialog(null, "Here is a seating chart, there is a help section in the top tab, saying what you type to do the function"
@@ -22,7 +25,7 @@ public class cla
 
 	    printArray2(blastTable);
 	}
-
+//INSTANCE VARIABLES
 public static int a = (int)(Math.random()*4) +1;
 public static int b = (int)(Math.random()*4) +1;
 public static int c = (int)(Math.random()*4) +1;
@@ -33,16 +36,11 @@ static int r = 0;
 static String q = ",";
 static String[][] blastTable2;
 static ArrayList<String> obj = new ArrayList<String>();
-/*
-	//Method to print two dimensional array in a JOptionPane
-	public static void printArray(int[][] num1){
 
-	    for(int x=0; x<num1.length; x++){
-	        String output = Arrays.toString(num1[x]);
-	            JOptionPane.showMessageDialog(null, output, "Uitvoer",
-	                    JOptionPane.INFORMATION_MESSAGE);
-	        }
-	    } 
+	/* This method takes a 2d array as a parameter and makes 
+	* each value a string to print out in one dialog box.
+	* After, it asks if you want to swap, if so, it randomly
+	* swaps the first row. And then runs the printArray method.
 	*/
 public static void printArray2(String[][] blastTable) {
     String output = "";
@@ -63,6 +61,14 @@ public static void printArray2(String[][] blastTable) {
  
 
 }
+	/* This method prints out the new 2d seating chart, and has different
+	* options: help, remove, move, name, chart and exit. All of these options
+	* do different commands. Remove, removes a student from the chart and sets
+	* the seat to null. Move, moves a student to a different seat if there is 
+	* available seats. Chart, makes a new seating chart of a different size
+	* with names inputted. Exit, exits the program. Finally, name, adds a student
+	* of an inputted name to a random seat, if available.
+	*/
 	public static void printArray(String[][] blastTable) {
 	    String output = "";
 	    String[][] array = new String[3][3];
