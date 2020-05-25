@@ -162,10 +162,7 @@ public static void printArray2(String[][] blastTable) {
 	 blastTable[0][4] = "null";
  	printArray(blastTable);
  }
- ///////////////////
 
- 
- //////
  if(s.equalsIgnoreCase("move1")) {
 	
 	
